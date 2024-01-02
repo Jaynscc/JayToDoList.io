@@ -25,4 +25,21 @@
 
     <script src="todo.js"></script>
 </body>
+
+<script>
+    window.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+  });
+  
+  // 禁用键盘按键
+    window.addEventListener('keydown', function (e) {
+        // 如果用户按下了 Ctrl 或者 Command 键
+        if (e.ctrlKey === true || e.metaKey === true) {
+        // 禁用 F12 键
+        if (e.keyCode === 123) {
+            e.preventDefault();
+        }
+        }
+    });
+</script>
 </html>
